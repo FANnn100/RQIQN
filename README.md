@@ -1,12 +1,12 @@
 # RQIQN: Quantile Geometry Regularization for Distributional Reinforcement Learning
 
-[Navigation](navigation/README.md) | [Alien](atari/README.md) | [Citation](#citation)
+[Navigation](navigation/README.md) | [Atari example](atari/README.md) | [Citation](#citation)
 
 Zhaofan Zhang, Minghao Yang, Rufeng Chen, Sihong Xie, Hui Xiong
 
 NeurIPS 2026
 
-RQIQN augments implicit quantile networks with a bounded, fraction-dependent correction motivated by Wasserstein distributionally robust quantile estimation. This repository provides two experimental components: risk-sensitive surface-vessel navigation in PyTorch and Alien in the Arcade Learning Environment using JAX/Dopamine.
+RQIQN augments implicit quantile networks with a bounded, fraction-dependent correction motivated by Wasserstein distributionally robust quantile estimation. This repository provides two experimental components: risk-sensitive surface-vessel navigation in PyTorch and an Atari example in the Arcade Learning Environment using JAX/Dopamine.
 
 ## Method
 
@@ -22,7 +22,7 @@ The components preserve the implementations used in the respective experiments. 
 
 ```text
 RQIQN/
-├── atari/                     # Alien training, recording, and plotting
+├── atari/                     # Atari example: training, recording, and plotting
 │   ├── configs/               # Formal and smoke-test Gin configurations
 │   ├── dopamine/              # Required Dopamine implementation
 │   ├── scripts/               # Train, export CSV, and plot learning curves
@@ -40,10 +40,10 @@ RQIQN/
 
 ## Setup
 
-Use separate Python environments for the PyTorch navigation component and the JAX/TensorFlow Alien component. Each component documents its tested environment and installation requirements:
+Use separate Python environments for the PyTorch navigation component and the JAX/TensorFlow Atari example. Each component documents its tested environment and installation requirements:
 
 - [Navigation setup](navigation/README.md)
-- [Alien setup](atari/ENVIRONMENT.md)
+- [Atari example setup](atari/ENVIRONMENT.md)
 
 The repository contains source code and configurations. Existing experiment statistics, trained weights, and Atari ROMs are not distributed. Training creates new records and model files in the output directory you select.
 
@@ -76,7 +76,7 @@ python navigation/aggregate.py \
 
 The formal test protocol uses 500 layouts per seed, with 10 obstacles and 8 vortex cores. It is separate from the fixed 30-scene online learning evaluation. See the [navigation documentation](navigation/README.md) for the control periods, metric definitions, online scene protocols, and curve plotting.
 
-## Alien
+## Atari example
 
 Train one of the three independent RQIQN runs:
 
@@ -93,7 +93,7 @@ python scripts/plot_training_returns.py \
   --output-prefix ../outputs/alien_rqiqn
 ```
 
-The default budget is approximately 200M Atari frames per run under sticky actions with probability 0.25. This component covers Alien; it does not reconstruct the full nine-game benchmark or distribute baseline results. See the [Alien documentation](atari/README.md) for CSV export, resuming, seeding, and smoke tests.
+The default budget is approximately 200M Atari frames per run under sticky actions with probability 0.25. This example covers one game from the paper's Atari experiments. See the [Atari example documentation](atari/README.md) for CSV export, resuming, seeding, and smoke tests.
 
 ## Reproducibility
 
@@ -114,7 +114,10 @@ The release has been checked with short real-environment runs and recording/plot
 
 ## Acknowledgements
 
-The Alien component builds on [Dopamine](https://github.com/google/dopamine). The navigation environment and IQN implementation build on the work of Xi Lin, John McConnell, and Brendan Englot, and [BY571/IQN](https://github.com/BY571/IQN). Please retain the upstream license notices and cite the navigation environment when using it; its citation is included in the [navigation documentation](navigation/README.md).
+Our implementation is based on the following open-source projects. We thank their authors for making their code publicly available and for their outstanding work:
+
+1. [Dopamine](https://github.com/google/dopamine).
+2. [Robust Unmanned Surface Vehicle Navigation with Distributional Reinforcement Learning](https://github.com/RobustFieldAutonomyLab/Distributional_RL_Navigation) by Xi Lin, John McConnell, and Brendan Englot.
 
 ## License
 
