@@ -1,6 +1,6 @@
 # RQIQN: Quantile Geometry Regularization for Distributional Reinforcement Learning
 
-[Navigation](navigation/README.md) | [Alien](atari/README.md) | [Experiment protocols](docs/PAPER_ALIGNMENT.md) | [Citation](#citation)
+[Navigation](navigation/README.md) | [Alien](atari/README.md) | [Citation](#citation)
 
 Zhaofan Zhang, Minghao Yang, Rufeng Chen, Sihong Xie, Hui Xiong
 
@@ -16,7 +16,7 @@ The implementation follows three steps:
 2. Apply a bounded type-2 Wasserstein correction, scaled by a reverse-logistic time schedule and the current state-action quantile mean.
 3. Optimize the corrected quantile objective while retaining the implicit quantile representation.
 
-The components preserve the implementations used in the respective experiments. The [experiment protocol note](docs/PAPER_ALIGNMENT.md) records their training settings, gradient handling, evaluation layouts, and metric definitions.
+The components preserve the implementations used in the respective experiments. Each component documents its training settings, gradient handling, evaluation layouts, and metric definitions.
 
 ## Repository layout
 
@@ -27,17 +27,15 @@ RQIQN/
 │   ├── dopamine/              # Required Dopamine implementation
 │   ├── scripts/               # Train, export CSV, and plot learning curves
 │   └── tests/
-├── navigation/                # Surface-vessel navigation
-│   ├── configs/               # Training and evaluation protocols
-│   ├── marinenav_env/         # Vessel dynamics, perception, and flow fields
-│   ├── thirdparty/IQN/        # RQIQN and required IQN implementation
-│   ├── train.py               # Train and record new experiments
-│   ├── evaluate.py            # Evaluate newly trained policies
-│   ├── aggregate.py           # Aggregate independent training seeds
-│   ├── plot.py                # Plot recorded learning curves
-│   └── tests/
-└── docs/
-    └── PAPER_ALIGNMENT.md     # Verified experiment settings and protocols
+└── navigation/                # Surface-vessel navigation
+    ├── configs/               # Training and evaluation protocols
+    ├── marinenav_env/         # Vessel dynamics, perception, and flow fields
+    ├── thirdparty/IQN/        # RQIQN and required IQN implementation
+    ├── train.py               # Train and record new experiments
+    ├── evaluate.py            # Evaluate newly trained policies
+    ├── aggregate.py           # Aggregate independent training seeds
+    ├── plot.py                # Plot recorded learning curves
+    └── tests/
 ```
 
 ## Setup
@@ -120,4 +118,4 @@ The Alien component builds on [Dopamine](https://github.com/google/dopamine). Th
 
 ## License
 
-The navigation component retains its upstream MIT license. Dopamine-derived code in `atari/` retains its Apache-2.0 license. See [NOTICE](NOTICE), [navigation/LICENSE](navigation/LICENSE), and [atari/LICENSE](atari/LICENSE) for the component-specific terms.
+The navigation component retains its upstream MIT license. Dopamine-derived code in `atari/` retains its Apache-2.0 license. See [navigation/LICENSE](navigation/LICENSE) and [atari/LICENSE](atari/LICENSE) for the component-specific terms.
