@@ -1,0 +1,19 @@
+# Python 3.8; proposed clean CPU installation, not a newly installed/tested env.
+# Match the checked dopamine-38 stack; use a NumPy-1.24-compatible OpenCV wheel.
+numpy==1.24.3
+scipy==1.10.1
+ml-dtypes==0.2.0
+typing-extensions==4.5.0
+absl-py==2.3.1
+gin-config==0.5.0
+jax==0.4.13
+jaxlib==0.4.13
+flax==0.7.2
+optax==0.1.7
+chex==0.1.7
+orbax-checkpoint==0.2.3
+tensorstore==0.1.45
+tensorflow==2.13.1
+gym==0.26.2
+ale-py==0.8.1
+opencv-python==4.8.1.78

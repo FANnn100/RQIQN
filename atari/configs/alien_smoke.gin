@@ -1,0 +1,11 @@
+# Pipeline test only. This configuration is not used for paper results.
+Runner.num_iterations = 1
+Runner.training_steps = 256
+Runner.max_steps_per_episode = 64
+Runner.fine_grained_print_to_console = False
+JaxRQIQNAgent.min_replay_history = 64
+JaxRQIQNAgent.num_tau_samples = 8
+JaxRQIQNAgent.num_tau_prime_samples = 8
+JaxRQIQNAgent.num_quantile_samples = 8
+OutOfGraphReplayBuffer.replay_capacity = 512
+OutOfGraphReplayBuffer.batch_size = 4

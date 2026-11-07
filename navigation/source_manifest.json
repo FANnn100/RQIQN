@@ -1,0 +1,97 @@
+{
+  "source_project": "USV_RQIQN",
+  "upstream": "https://github.com/RobustFieldAutonomyLab/Distributional_RL_Navigation",
+  "source_git_head": "cf670a770a491713fb1c27f5512b105a694a6e1c",
+  "scope": "Historical navigation RQIQN implementation; copied workspace files are identified by hashes because some are not tracked in the source commit.",
+  "algorithm": "Core RQIQN, parent IQN, network, replay and simulator files copied verbatim; package registries remove unrelated baselines.",
+  "files": [
+    {
+      "path": "marinenav_env/__init__.py",
+      "source": "marinenav_env/__init__.py",
+      "source_sha256": "464e5156b83e7f87d38572c6e4ff1bb56532a09417ab7ac1eda78d2c43a343b8",
+      "packaged_sha256": "464e5156b83e7f87d38572c6e4ff1bb56532a09417ab7ac1eda78d2c43a343b8",
+      "modified": false
+    },
+    {
+      "path": "marinenav_env/envs/__init__.py",
+      "source": "marinenav_env/envs/__init__.py",
+      "source_sha256": "d5fd00d16e364c15c7884f76721f70b275d10f1e2f5ef13cec734969059d5c33",
+      "packaged_sha256": "d5fd00d16e364c15c7884f76721f70b275d10f1e2f5ef13cec734969059d5c33",
+      "modified": false
+    },
+    {
+      "path": "marinenav_env/envs/marinenav_env.py",
+      "source": "marinenav_env/envs/marinenav_env.py",
+      "source_sha256": "f463f68133bbce646a9757f3f16067187d3038e270bb71c850b9d8b5843f6613",
+      "packaged_sha256": "f463f68133bbce646a9757f3f16067187d3038e270bb71c850b9d8b5843f6613",
+      "modified": false
+    },
+    {
+      "path": "marinenav_env/envs/utils/robot.py",
+      "source": "marinenav_env/envs/utils/robot.py",
+      "source_sha256": "5b0463c2946160e8d3bc97b00eba9c4a076ae48acc3f8742db01c2bc21574bc1",
+      "packaged_sha256": "5b0463c2946160e8d3bc97b00eba9c4a076ae48acc3f8742db01c2bc21574bc1",
+      "modified": false
+    },
+    {
+      "path": "thirdparty/IQN/agent.py",
+      "source": "thirdparty/IQN/agent.py",
+      "source_sha256": "0c3a6c2bf9b9900a79d2010afe72df8a2c5e126c83c9eff936986dced514f2f3",
+      "packaged_sha256": "0c3a6c2bf9b9900a79d2010afe72df8a2c5e126c83c9eff936986dced514f2f3",
+      "modified": false
+    },
+    {
+      "path": "thirdparty/IQN/rqiqn_agent.py",
+      "source": "thirdparty/IQN/rqiqn_agent.py",
+      "source_sha256": "ede7c364833ca641ee73abe93d0a3e11d420f8bcb6267feee7bd19b1d9881d77",
+      "packaged_sha256": "ede7c364833ca641ee73abe93d0a3e11d420f8bcb6267feee7bd19b1d9881d77",
+      "modified": false
+    },
+    {
+      "path": "thirdparty/IQN/model.py",
+      "source": "thirdparty/IQN/model.py",
+      "source_sha256": "f9a1dd0d084239626d1f2dfe6d31e153186fa5c8769c10434f29e7418ae43adf",
+      "packaged_sha256": "f9a1dd0d084239626d1f2dfe6d31e153186fa5c8769c10434f29e7418ae43adf",
+      "modified": false
+    },
+    {
+      "path": "thirdparty/IQN/replay_buffer.py",
+      "source": "thirdparty/IQN/replay_buffer.py",
+      "source_sha256": "6cef1f898e9699f3dd20320111fa8c34b89c529fba1d10a13448d5d6e000b8cc",
+      "packaged_sha256": "6cef1f898e9699f3dd20320111fa8c34b89c529fba1d10a13448d5d6e000b8cc",
+      "modified": false
+    },
+    {
+      "path": "thirdparty/__init__.py",
+      "source": "thirdparty/__init__.py",
+      "source_sha256": "748be69e7319fafdaca8b1391cbd368b37cf2f69ce6c3f97d3a61040925d10be",
+      "packaged_sha256": "371dbcd45ec06190a1c66d495159dfdeb72795c14c716679f7275baeeccdb487",
+      "modified": true,
+      "reason": "Replace eager baseline imports with a minimal package marker."
+    },
+    {
+      "path": "thirdparty/IQN/__init__.py",
+      "source": "thirdparty/IQN/__init__.py",
+      "source_sha256": "cb84b61d7b87f100f7006f983d520a8e9fb46a81b2a2bb7d7c23edf862dbaf43",
+      "packaged_sha256": "7f2e403fde8ae3ec1a6cbfe27b1f06270480527d91a465c98d1c9675424e6835",
+      "modified": true,
+      "reason": "Replace eager baseline imports with a minimal package marker."
+    }
+  ],
+  "validation": {
+    "historical_online30_matches_archived_layouts": true,
+    "formal_hard500_matches_archived_layouts": true,
+    "core_byte_identity_checked": true,
+    "smoke_training_actions": 64,
+    "real_gradient_updates_verified": true,
+    "parameters_changed_verified": true,
+    "online_curve_generation_verified": true,
+    "note": "Layout reference files were read only for comparison; no historical layouts, results or weights are included."
+  },
+  "formal_configuration_source": {
+    "source": "experiment_para/RQIQN_dynamic_1chu5/training_2026-04-22-01-06-22/seed_0/trial_config.json",
+    "source_sha256": "4bd4cf502c493aa737e068bb4db6eb20d5e6587a736aadc938820cc35cbbc80f",
+    "packaged_configuration": "configs/table1_rqiqn.json",
+    "reconstruction": "Agent defaults explicitly frozen; source save directories and training timestamps omitted."
+  }
+}

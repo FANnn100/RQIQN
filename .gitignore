@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+.env
+runs/
+outputs/
+curves/
+artifacts/
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.npy
+events.out.tfevents*
