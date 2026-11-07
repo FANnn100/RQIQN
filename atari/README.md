@@ -144,10 +144,10 @@ python -m unittest discover -s tests
 If this implementation is useful in your research, please cite:
 
 ```bibtex
-@inproceedings{zhang2026rqiqn,
+@article{zhang2026quantile,
   title={Quantile Geometry Regularization for Distributional Reinforcement Learning},
   author={Zhang, Zhaofan and Yang, Minghao and Chen, Rufeng and Xie, Sihong and Xiong, Hui},
-  booktitle={Advances in Neural Information Processing Systems},
+  journal={arXiv preprint arXiv:2605.08182},
   year={2026}
 }
 ```
