@@ -155,3 +155,7 @@ If this implementation is useful in your research, please cite:
 ## Acknowledgements
 
 This implementation builds on [Dopamine](https://github.com/google/dopamine) and its Implicit Quantile Network implementation. Original copyright notices, the Apache-2.0 [LICENSE](LICENSE), and [AUTHORS](AUTHORS) are retained. Source provenance and the small compatibility changes are documented in [IMPLEMENTATION.md](IMPLEMENTATION.md) and [core_source_manifest.json](core_source_manifest.json).
+
+## License
+
+Original contributions by The RQIQN Authors, including experiment scripts and supporting tools, are released under the [MIT License](../LICENSE). Dopamine-derived files retain their existing copyright notices and [Apache-2.0 license](LICENSE).

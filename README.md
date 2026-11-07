@@ -121,4 +121,6 @@ Our implementation is based on the following open-source projects. We thank thei
 
 ## License
 
-The navigation component retains its upstream MIT license. Dopamine-derived code in `atari/` retains its Apache-2.0 license. See [navigation/LICENSE](navigation/LICENSE) and [atari/LICENSE](atari/LICENSE) for the component-specific terms.
+Original contributions by The RQIQN Authors, including RQIQN-specific implementations and experiment scripts, are released under the [MIT License](LICENSE).
+
+Third-party material and files derived from it retain their existing copyright notices and applicable license terms. Dopamine-derived code retains the [Apache-2.0 license](atari/LICENSE), while the upstream navigation environment and IQN implementation retain their [MIT license](navigation/LICENSE).

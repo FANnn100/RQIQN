@@ -157,3 +157,7 @@ Vehicle Navigation with Distributional Reinforcement Learning,” IROS 2023,
 pp. 6185–6191, doi:10.1109/IROS55552.2023.10342389, for the navigation simulator
 and original distributional navigation implementation, together with the
 RQIQN paper for its method and experiments.
+
+## License
+
+Original RQIQN extensions and reproduction scripts contributed by The RQIQN Authors are released under the [MIT License](../LICENSE). The upstream simulator and IQN implementation retain their [MIT license](LICENSE), copyright (c) 2023 Robust Field Autonomy Lab.
